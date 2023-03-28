@@ -36,6 +36,12 @@ def get_issubset(set1, set2):
 print(get_issubset(fourth_set, fifth_set))
 print(get_issubset(fifth_set, fourth_set))
 
+# returns bool if set is superset of second set
+# uses .issuperset()
+def get_issuperset(set1, set2):
+    return set1.issuperset(set2)
+
+print(get_issuperset(fifth_set, fourth_set))
 
 sixth_set = set([1, 2, 3])
 seventh_set = set([4, 5, 6])
@@ -46,6 +52,7 @@ def get_isdisjoint(set1, set2):
     return set1.isdisjoint(set2)
 
 print(get_isdisjoint(sixth_set, seventh_set))
+
 
 eighth_set = set([1, 10, 25, 3, 4])
 ninth_set = set([4, 5, 6, 7])
