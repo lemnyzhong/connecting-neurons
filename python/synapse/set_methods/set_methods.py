@@ -46,3 +46,12 @@ def get_isdisjoint(set1, set2):
     return set1.isdisjoint(set2)
 
 print(get_isdisjoint(sixth_set, seventh_set))
+
+eighth_set = set([1, 10, 25, 3, 4])
+ninth_set = set([4, 5, 6, 7])
+
+# joins 2 sets in order, common values are not repeated
+def get_union(set1, set2):
+    return set1.union(set2)
+
+print(get_union(eighth_set, ninth_set))
