@@ -62,3 +62,8 @@ def get_union(set1, set2):
     return set1.union(set2)
 
 print(get_union(eighth_set, ninth_set))
+
+# First in First out pop, removes front of set
+print(ninth_set.pop())
+print(eighth_set.pop())
+print(ninth_set.pop())
