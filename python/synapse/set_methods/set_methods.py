@@ -63,7 +63,7 @@ def get_union(set1, set2):
 
 print(get_union(eighth_set, ninth_set))
 
-# First in First out pop, removes front of set
+# random pop, removes a random element from set
 print(ninth_set.pop())
 print(eighth_set.pop())
 print(ninth_set.pop())
