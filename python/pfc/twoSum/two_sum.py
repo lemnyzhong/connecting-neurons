@@ -10,19 +10,17 @@
 
 
 # arr = [2, 2, 3, 6, 5, 8, 1]
-
+arr = [2, 1, 5, 3]
 # brute force solution
 # O(n^2) complexity with double for loops
-# def two_sum_brute(arr, target):
-#     d = []
-#     for i in range(len(arr)):
-#         for j in range(i+1, len(arr)):
-#             if(arr[i] + arr[j] == target):
-#                 d.append(i)
-#                 d.append(j)
-#     return list(set(d))
+def two_sum_brute(arr, target):
+    for i in range(len(arr)-1):
+        for j in range(i+1, len(arr)):
+            if(target - arr[i] == arr[j]):
+            # if(arr[i] + arr[j] == target):
+                return [i, j]
 
-# print(two_sum_brute([2,7,3,6,5, 8, 1], 9))
+print(two_sum_brute(arr, 7))
 
 
 # using dictionary/hash map
