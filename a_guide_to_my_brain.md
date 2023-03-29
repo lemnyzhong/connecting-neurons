@@ -1,10 +1,10 @@
-# Hello World, this is the messy inner workings of my brain. 
+# Hello World, this is the messy inner workings of my mind. 
 
 ## And this document tries to help understand the mess.
 
 This `repo` and the folders contained with in it are a virtual representation of my mind and journey towards becoming a software engineer. For myself, it acts as a reference guide or library to the vast collective information that is fundamental to programming.
 
-For others, I hope this document can bring *any* help or clarity. Please do not assume this information to be correct, **do your own research**!
+For others, I hope this document can bring *any* help or clarity. Please do not assume this information to be correct, **do your own research**! I'm sure there are bugs and better solutions than what is presented.
 
 > This repo will be seperated into respective programming languages that I personally have tried and use.
 > These will be named as their respective language names. 
@@ -25,3 +25,8 @@ Other folders such as:
 > - **[`oneGiantLeap`](/schoolingMyself/2oneGiantLeap/intermediate-advanced.md) - is an intermediate/advanced curriculum focusing mainly on the python language
 > - **[`prettyThingsAndHowTheyWork`](/schoolingMyself/prettyThingsAndHowTheyWork/web-development) - is a general overview curriculum for web development
 > - **[`tearingMyFrontalLobeApart`](/schoolingMyself/tearingMyFrontalLobeApart/algorithmic-thinking.md) - is an overview curriculum for data structures and algorithms
+
+> `prettyThings` - a folder consisting of mostly web development or visual gui programs.
+
+If you would like to contact me or provide any advice/criticism, please email:
+elsiexie.io@gmail.com
