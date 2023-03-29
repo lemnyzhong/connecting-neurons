@@ -8,35 +8,41 @@
 # Output: [0,1]
 # Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-
-# arr = [2, 2, 3, 6, 5, 8, 1]
+# global arr
 arr = [2, 1, 5, 3]
+
+
 # brute force solution
-# O(n^2) complexity with double for loops
+# O(n^2) time complexity with double for loops
+# O(1) space complexity
 def two_sum_brute(arr, target):
     for i in range(len(arr)-1):
+        
         for j in range(i+1, len(arr)):
-            if(target - arr[i] == arr[j]):
-            # if(arr[i] + arr[j] == target):
+
+            if(arr[i] + arr[j] == target):
                 return [i, j]
 
-print(two_sum_brute(arr, 7))
+print(two_sum_brute(arr, 7)) # print results
 
 
 # using dictionary/hash map
 # seperate arr, into index and value
 # loop through each
 # if the difference of target and value exists in map
-# then return diff index and current index
-# otherwise add value to map
+# then return diff index value in map and current index
+# otherwise add diff value to map
+# O(n) time complexity, but O(n) space complexity
 arr = [2, 1, 5, 3]
 def two_sum_map(arr, target):
     map = {}
+
     for index, value in enumerate(arr):
         diff = target - value
+
         if diff in map:
             return [map[diff], index]
+        
         map[value] = index
 
-
-print(two_sum_map(arr, 7))
+print(two_sum_map(arr, 7))  # print results
