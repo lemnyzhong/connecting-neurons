@@ -1,72 +1,74 @@
-Web Development Curriculum                                              with the help of openAi's chatGPT-3
-HTML
-    Basic structure of HTML documents
-    HTML tags, elements, and attributes
-    Semantic HTML
-    HTML5 elements and features
-    Web accessibility best practices
+# Web Development Curriculum                                              
+                                                    with the help of openAi's chatGPT-3
 
-CSS
-    Basic syntax and selectors
-    Box model and layout
-    Typography and text effects
-    Responsive design with media queries
-    CSS frameworks such as Bootstrap and Foundation
-    CSS preprocessors such as Sass and Less
+## **HTML:**
+> - Basic structure of HTML documents
+> - HTML tags, elements, and attributes
+> - Semantic HTML
+> - HTML5 elements and features
+> - Web accessibility best practices
 
-JavaScript
-    Basic syntax and data types
-    Control flow and loops
-    Functions and scope
-    DOM manipulation and events
-    AJAX and JSON
-    JavaScript libraries and frameworks such as jQuery and React
+## **CSS:**
+> - Basic syntax and selectors
+> - Box model and layout
+> - Typography and text effects
+> - Responsive design with media queries
+> - CSS frameworks such as Bootstrap and Foundation
+> - CSS preprocessors such as Sass and Less
 
-Front-End Frameworks
-    Introduction to front-end frameworks
-    React, Angular, or Vue.js
-    Building and deploying a project with a front-end framework
-    API integrations with front-end frameworks
-    Introduction to Redux, RxJS, or Ngrx
+## **JavaScript:**
+> - Basic syntax and data types
+> - Control flow and loops
+> - Functions and scope
+> - DOM manipulation and events
+> - AJAX and JSON
+> - JavaScript libraries and frameworks such as jQuery and React
 
-Back-End Development
-    Server-side programming languages such as PHP, Python, Ruby, or Node.js
-    HTTP protocol and RESTful web services
-    Server-side frameworks such as Laravel, Django, Ruby on Rails, or Express.js
-    Relational and non-relational databases
-    RESTful API development
+## **Front-End Frameworks:**
+> - Introduction to front-end frameworks
+> - React, Angular, or Vue.js
+> - Building and deploying a project with a front-end framework
+> - API integrations with front-end frameworks
+> - Introduction to Redux, RxJS, or Ngrx
 
-Mobile-First Development
-    Responsive design principles
-    Mobile-first design strategies
-    Device testing and emulation
-    Progressive Web Apps (PWA)
-    Mobile-specific frameworks and libraries such as React Native or Ionic
+## **Back-End Development:**
+> - Server-side programming languages such as PHP, Python, Ruby, or Node.js
+> - HTTP protocol and RESTful web services
+> - Server-side frameworks such as Laravel, Django, Ruby on Rails, or Express.js
+> - Relational and non-relational databases
+> - RESTful API development
 
-Web Performance Optimization
-    Page speed optimization techniques
-    Asset optimization and minification
-    Caching strategies
-    Lazy loading and code splitting
-    Performance monitoring and analysis tools
+## **Mobile-First Development:**
+> - Responsive design principles
+> - Mobile-first design strategies
+> - Device testing and emulation
+> - Progressive Web Apps (PWA)
+> - Mobile-specific frameworks and libraries such as React Native or Ionic
 
-Design Principles
-    Color theory and color schemes
-    Typography and font pairings
-    Layout and composition
-    Visual hierarchy and contrast
-    Design trends and best practices
+## **Web Performance Optimization:**
+> - Page speed optimization techniques
+> - Asset optimization and minification
+> - Caching strategies
+> - Lazy loading and code splitting
+> - Performance monitoring and analysis tools
 
-User Experience Design
-    User-centered design principles
-    Personas and user testing
-    Information architecture and wireframing
-    Interaction design and micro-interactions
-    Usability testing and user feedback
+## **Design Principles:**
+> - Color theory and color schemes
+> - Typography and font pairings
+> - Layout and composition
+> - Visual hierarchy and contrast
+> - Design trends and best practices
 
-Advanced Topics
-    Web security best practices
-    Cross-site scripting (XSS) and cross-site request forgery (CSRF) prevention
-    Accessibility guidelines and compliance
-    Animation libraries and techniques such as CSS animations, SVG animations, or GreenSock
-    Machine learning and artificial intelligence in web development.
+## **User Experience Design:**
+> - User-centered design principles
+> - Personas and user testing
+> - Information architecture and wireframing
+> - Interaction design and micro-interactions
+> - Usability testing and user feedback
+
+## **Advanced Topics:**
+> - Web security best practices
+> - Cross-site scripting (XSS) and cross-site request forgery (CSRF) prevention
+> - Accessibility guidelines and compliance
+> - Animation libraries and techniques such as CSS animations, SVG animations, or GreenSock
+> - Machine learning and artificial intelligence in web development.
