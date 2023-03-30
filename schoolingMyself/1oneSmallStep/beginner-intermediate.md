@@ -1,5 +1,7 @@
 # Beginner/Intermediate Curriculum 
                                                         with the help of openAI's chatGPT-3.
+press `ctrl-k` then `v` to see preview form.
+
 # **Section 1**
 ## **Section 1.1. Introduction to Programming:**
 > Overview of programming concepts:

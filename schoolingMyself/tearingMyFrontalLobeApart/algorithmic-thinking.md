@@ -1,5 +1,6 @@
 # Algorithmic Thinking Curriculum                                 
                                                                 with the help of openAI's chatGPT-3
+press `ctrl-k` then `v` to see preview form.
 
 # Python Curriculum:
 
