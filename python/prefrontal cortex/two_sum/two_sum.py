@@ -45,7 +45,7 @@ def two_sum_map(arr, target):
         diff = target - value
 
         if diff in map:
-            return [diff, value]    # instead of returning index, returns the vals
+            return [map[diff], index]    # instead of returning index, returns the vals
         
         map[value] = index
 
