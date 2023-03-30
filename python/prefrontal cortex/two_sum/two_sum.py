@@ -12,10 +12,11 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 # global arr
 arr = [2, 1, 5, 3]
 
-
-# brute force solution
-# O(n^2) time complexity with double for loops
-# O(1) space complexity
+'''
+brute force solution
+O(n^2) time complexity with double for loops
+O(1) space complexity
+'''
 def two_sum_brute(arr, target):
     for i in range(len(arr)-1):
         
@@ -27,13 +28,15 @@ def two_sum_brute(arr, target):
 print(two_sum_brute(arr, 7)) # print results
 
 
-# using dictionary/hash map
-# seperate arr, into index and value
-# loop through each
-# if the difference of target and value exists in map
-# then return diff index value in map and current index
-# otherwise add diff value to map
-# O(n) time complexity, but O(n) space complexity
+'''
+using dictionary/hash map
+seperate arr, into index and value
+loop through each
+if the difference of target and value exists in map
+then return diff index value in map and current index
+otherwise add diff value to map
+O(n) time complexity, but O(n) space complexity
+'''
 arr = [2, 1, 5, 3]
 def two_sum_map(arr, target):
     map = {}
@@ -42,8 +45,8 @@ def two_sum_map(arr, target):
         diff = target - value
 
         if diff in map:
-            return [map[diff], index]
+            return [diff, value]    # instead of returning index, returns the vals
         
         map[value] = index
 
-print(two_sum_map(arr, 7))  # print results
+print(two_sum_map(arr, 6))  # print results
