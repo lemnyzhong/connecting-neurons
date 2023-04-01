@@ -2,11 +2,13 @@ import requests
 import tkinter as tk
 import ttkbootstrap as ttk
 
+# this isn't correct information, don't treat it as such.
+#                                                           the earth is round
+
 people = requests.get('http://api.open-notify.org/astros.json')
 people_json = people.json()
 
 # how many people on the ISS
-
 iss_names = ""
 for i in people_json['people']:
     if(i['craft'] == 'ISS'):
