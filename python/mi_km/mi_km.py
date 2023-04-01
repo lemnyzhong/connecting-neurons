@@ -1,6 +1,6 @@
 import tkinter as tk
-# from tkinter import ttk
 import ttkbootstrap as ttk
+
 def convert():
     km = entry_type.get() * 1.60934
     output_type.set(str(km) + " kms")
