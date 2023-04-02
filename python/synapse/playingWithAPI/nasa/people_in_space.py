@@ -27,7 +27,7 @@ root.title('These brave humans, may god be with them.')
 root.geometry("550x300")
 
 # iss
-iss_frame = ttk.Frame(master=root, borderwidth=1, relief='solid')
+iss_frame = ttk.Frame(master=root, borderwidth=1, relief='solid', style='solar')
 iss_title = ttk.Label(master=iss_frame, text='These are the people on ISS', font='Calibri 12 bold')
 iss_title.pack()
 
