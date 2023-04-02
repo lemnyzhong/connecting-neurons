@@ -51,5 +51,6 @@ end_quote = "man and his quest for knowledge and progress is determined and cann
 end_title = ttk.Label(master=root, text=end_quote)
 end_title.pack()
 end_title.place(x=30, y=260)
+
 # run
 root.mainloop()
