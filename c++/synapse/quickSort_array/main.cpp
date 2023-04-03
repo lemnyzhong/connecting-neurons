@@ -69,9 +69,9 @@ void print(int arr[], int size) {
 
 int main() {
     int a[] {5, 3, 4, 1, 2, 9, 10, 12, 14, 12, 0, 32, 54, 1, 23, 10, -1, 14, 33};
-    int size = sizeof(a)/sizeof(int);
-    quickSort(a, size);
-    print(a, size);
+    //int size = sizeof(a)/sizeof(int);
+    quickSort(a, sizeof(a)/sizeof(int));
+    print(a, sizeof(a)/sizeof(int));
 
     std::cout << "\n";
 
