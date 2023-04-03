@@ -25,8 +25,13 @@ class myDeque {
 
         const T& front() const;
 
-        // more functions
+        void push_back(T);
 
+        void pop_back();
+
+        void push_front(T);
+
+        void pop_front();
 
         bool empty() const;
 

@@ -11,7 +11,7 @@ myDeque<T>::myDeque(int n) {
     for(auto i = 0; i < midPoint; i++) {
         frontVector.push_back(0);
     }
-    for(auto i = 0; i < midPoint; i++) {
+    for(auto i = 0; i < midPoint+1; i++) {
         backVector.push_back(0);
     }
 }
@@ -29,28 +29,65 @@ myDeque<T>::myDeque(std::initializer_list<T> vals) {
 }
 
 template <typename T>
+void myDeque<T>::push_back(T val) {
+    if(backVector.size() >= backVector.capacity()) {
+        backVector.reserve(backVector.capacity()*2);
+    }
+    backVector.push_back(val);
+}
+
+template <typename T>
+void myDeque<T>::push_front(T val) {
+    if(frontVector.size() >= frontVector.capacity()) {
+        frontVector.reserve(frontVector.capacity()*2);
+    }
+    frontVector.push_back(val);
+}
+
+template <typename T>
+void myDeque<T>::pop_back() {
+    backVector.pop_back();
+}
+
+template <typename T>
+void myDeque<T>::pop_front() {
+    if(backVector.empty() == true) {
+        return frontVector[0];
+    }
+    return *(backVector.end()-1);
+}
+
+template <typename T>
 T& myDeque<T>::back() {
+    if(backVector.empty() == true) {
+        return frontVector[0];
+    }
     return *(backVector.end()-1);
 }
 
 template <typename T>
 const T& myDeque<T>::back() const {
+    if(backVector.empty() == true) {
+        return frontVector[0];
+    }
     return *(backVector.end()-1);
 }
 
 template <typename T>
 T& myDeque<T>::front() {
+    if(frontVector.empty() == true) {
+        return backVector[0];
+    }
     return *(frontVector.end()-1);
 }
 
 template <typename T>
 const T& myDeque<T>::front() const {
+    if(frontVector.empty() == true) {
+        return backVector[0];
+    }
     return *(frontVector.end()-1);
 }
-
-// more functions
-
-
 
 template <typename T>
 bool myDeque<T>::empty() const{
