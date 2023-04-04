@@ -1,0 +1,136 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+body main {
+  height: 40vh;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+body main div {
+  position: relative;
+  margin: auto auto;
+  width: 100vw;
+}
+body main h1 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 11em auto;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-animation: fadeIn 8s ease-in forwards;
+          animation: fadeIn 8s ease-in forwards;
+}
+body main h1 a {
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+  width: 100%;
+}
+body main h1 a span {
+  font-weight: bold;
+  font-size: 50px;
+  -webkit-animation: fadeIn 12s forwards;
+          animation: fadeIn 12s forwards;
+}
+body main h1 a:hover {
+  visibility: hidden;
+}
+body main .clicked-title {
+  visibility: hidden;
+}
+body .vid {
+  position: absolute;
+  width: 50%;
+  margin-top: -600px;
+  margin-left: 24em;
+  visibility: hidden;
+}
+body .display-vid {
+  visibility: visible;
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  height: 12vh;
+  width: 100vw;
+  -webkit-animation: fadeIn 5s forwards;
+          animation: fadeIn 5s forwards;
+}
+footer ul {
+  list-style: none;
+  width: 100%;
+}
+footer ul li {
+  margin-top: 1.5em;
+  margin-left: 11em;
+  font-size: larger;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+footer ul li .insta {
+  content: "@nom.de.d__u";
+  content: "yes";
+}
+footer ul li .insta:after {
+  content: "@ nom.de.d__u";
+}
+footer ul li .insta:hover::after {
+  margin: auto 3.5em;
+  content: "i'm shy.";
+}
+footer object {
+  position: relative;
+  margin-top: -9.8em;
+  margin-left: 52em;
+  margin-right: 20px;
+  padding-right: auto;
+  padding-bottom: 0;
+  overflow-x: hidden;
+  width: 40vw;
+}
+footer object:hover {
+  -webkit-animation: grow 3s forwards;
+          animation: grow 3s forwards;
+}
+footer .hide-all {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes grow {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(150%);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(150%);
+  }
+}/*# sourceMappingURL=main.css.map */

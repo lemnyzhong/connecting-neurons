@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(255, 255, 255);
+    
+
+    main {
+        height: 40vh;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+
+        div {
+            position: relative;
+            margin: auto auto;
+            width: 100vw;
+        }
+
+        h1 {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            margin: 11em auto;
+            font-family: Arial, Helvetica, sans-serif;
+            animation: fadeIn 8s ease-in forwards;
+
+            a {
+                color: black;
+                font-size: 40px;
+                text-decoration: none;
+                width: 100%;
+
+                span {
+                    font-weight: bold;
+                    font-size: 50px;
+                    animation: fadeIn 12s forwards;
+                    
+                    span {
+                        //text-decoration: underline;
+                    }
+                }
+               
+                &:hover {
+                    //display: none; // smoother transition to hide
+                    visibility: hidden; // slower/chaotic transition to hide 
+                }
+            }
+        }
+
+        .clicked-title {
+            visibility: hidden;
+        }
+    }
+
+    .vid {
+        position: absolute;
+        width: 50%;
+        margin-top: -600px;
+        margin-left: 24em;
+        visibility: hidden;
+    }
+
+    .display-vid {
+        visibility: visible;
+    }
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    height: 12vh;
+    width: 100vw;
+    animation: fadeIn 5s forwards;
+
+    ul {
+        // use block or directional flex instead of margin adjusting gap and box placement
+        list-style: none;
+        width: 100%;
+
+
+        li {
+            margin-top: 1.5em;
+            margin-left: 11em;
+            font-size: larger;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .insta {
+                content: '@nom.de.d__u';
+                content: 'yes';
+                
+                &:after {
+                    content: '@ nom.de.d__u';
+                }
+
+                &:hover::after {
+                    margin: auto 3.5em;
+                    content: "i'm shy.";
+                }
+            }
+        }
+        
+    }
+
+    object {
+        position: relative;
+        margin-top: -9.8em;
+        margin-left: 52em;
+        margin-right: 20px;
+        padding-right: auto;
+        padding-bottom: 0;
+        overflow-x: hidden;
+        width: 40vw;
+
+        &:hover {
+            animation: grow 3s forwards;
+        }
+    } 
+    
+    .hide-all {
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(100%);
+    }
+    to {
+        transform: scale(150%);
+    }
+}
