@@ -23,6 +23,7 @@ myDeque<T>::myDeque(std::initializer_list<T> vals) {
     for(auto i = vals.begin()+midPoint-1; i != vals.begin()-1; i--) {
         frontVector.push_back(*i);
     }
+
     for(auto i = vals.begin()+midPoint; i != vals.end(); i++) {
         backVector.push_back(*i);
     }
@@ -46,15 +47,51 @@ void myDeque<T>::push_front(T val) {
 
 template <typename T>
 void myDeque<T>::pop_back() {
-    backVector.pop_back();
+    if(backVector.empty() == false) {
+        backVector.pop_back();
+    }
+    else {
+        if(frontVector.size() == 1) {
+            frontVector.pop_back();
+        }
+        // frontVector.erase(frontVector.begin());
+        else {
+            std::size_t midPoint = frontVector.size()/2;
+
+            for(auto i = 0; i < midPoint; i++) {
+                backVector.push_back(std::move(frontVector[midPoint-i]));
+                //frontVector.erase(frontVector.begin());
+            }
+            frontVector.erase(frontVector.begin(), frontVector.begin()+midPoint);
+
+            backVector.pop_back();
+        }
+    }
 }
 
 template <typename T>
 void myDeque<T>::pop_front() {
-    if(backVector.empty() == true) {
-        return frontVector[0];
+    if(frontVector.empty() == false) {
+        frontVector.pop_back();
     }
-    return *(backVector.end()-1);
+    else {
+        if(backVector.size() == 1) {
+            backVector.pop_back();
+        }
+        // backVector.erase(backVector.begin());
+
+        else {
+            std::size_t midPoint = backVector.size()/2;
+
+            for(auto i = 1; i < midPoint; i++) {
+                frontVector.push_back(std::move(backVector[i]));
+            }
+            backVector.erase(backVector.begin(), backVector.end()+midPoint);
+
+            frontVector.pop_back();
+        }
+        
+    }
 }
 
 template <typename T>
@@ -91,7 +128,7 @@ const T& myDeque<T>::front() const {
 
 template <typename T>
 bool myDeque<T>::empty() const{
-    if(frontVector.size() == 0 && backVector.size() == 0) {
+    if(frontVector.empty() && backVector.empty()) {
         return true;
     }
     return false;
