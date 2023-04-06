@@ -56,6 +56,7 @@ void myDeque<T>::pop_back() {
         }
         // frontVector.erase(frontVector.begin());
         else {
+            // rebalance
             std::size_t midPoint = frontVector.size()/2;
 
             for(auto i = 0; i < int(midPoint); i++) {
