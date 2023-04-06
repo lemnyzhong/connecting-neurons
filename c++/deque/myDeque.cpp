@@ -58,7 +58,7 @@ void myDeque<T>::pop_back() {
         else {
             std::size_t midPoint = frontVector.size()/2;
 
-            for(auto i = 0; i < midPoint; i++) {
+            for(auto i = 0; i < int(midPoint); i++) {
                 backVector.push_back(std::move(frontVector[midPoint-i]));
                 //frontVector.erase(frontVector.begin());
             }
@@ -78,19 +78,17 @@ void myDeque<T>::pop_front() {
         if(backVector.size() == 1) {
             backVector.pop_back();
         }
-        // backVector.erase(backVector.begin());
-
         else {
-            std::size_t midPoint = backVector.size()/2;
+        std::size_t midPoint = backVector.size()/2;
 
-            for(auto i = 1; i < midPoint; i++) {
-                frontVector.push_back(std::move(backVector[i]));
-            }
-            backVector.erase(backVector.begin(), backVector.end()+midPoint);
-
-            frontVector.pop_back();
+        for(auto i = 0; i < int(midPoint); i++) {
+            frontVector.push_back(std::move(backVector[midPoint-i]));
         }
-        
+
+        backVector.erase(backVector.begin(), backVector.begin()+midPoint);
+
+        frontVector.pop_back();
+        }
     }
 }
 
