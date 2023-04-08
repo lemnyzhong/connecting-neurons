@@ -4,7 +4,7 @@ import webbrowser
 
 def main():
     # extracting web data and booting it into BeautifulSoup
-    rq = requests.get('https://www.seek.com.au/programming-jobs/in-All-Sydney-NSW').text
+    rq = requests.get('https://www.seek.com.au/entry-level-software-jobs/in-All-Sydney-NSW').text
     soup = BeautifulSoup(rq, 'lxml')
 
     # searching specific html elements for roles titles
@@ -28,7 +28,7 @@ def main():
 
     # if you see anything interesting bust open the webpage
     if(input("open?\n").lower() == 'yes'):
-        webbrowser.open_new('https://www.seek.com.au/programming-jobs/in-All-Sydney-NSW')
+        webbrowser.open_new('https://www.seek.com.au/entry-level-software-jobs/in-All-Sydney-NSW')
 
 
 if __name__ == "__main__":
