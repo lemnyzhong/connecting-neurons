@@ -20,6 +20,7 @@ def making_you_wait(waste):
 
 def main():
     welcome_ans = input("Welcome to JbScrpr v0.1\nWhat would you like to do:\n")
+
     while welcome_ans != 'quit':
         match welcome_ans:
             case 'scrape':
@@ -27,11 +28,16 @@ def main():
                 area_ans = input('Please enter the area you would like to use:\n(Please remember the format for keywords is "in-All-Sydney-NSW")\n')
 
                 s = scraper(keyword_ans, area_ans)
-                s.scrape()
-                
-                making_you_wait(5)
 
-                s.printAll()
+                try:
+                    s.scrape()
+                    
+                    making_you_wait(5)
+
+                    s.printAll()
+
+                except:
+                    continue
 
                 welcome_ans = input('What would you like to do:\n')
 
@@ -45,8 +51,24 @@ def main():
                     i.print_path()
                 welcome_ans = input('What would you like to do:\n')
             
+            case 'open':
+                print('\nThese are the current search paths:\n')
+
+                for i in range(0, len(scraper_obj)):
+                    print(f'{i+1}. {scraper_obj[i].get_path()}\n')
+                
+                n = input("Which would you like to open:\n")
+                
+                if(int(n) != 0):
+                    scraper_obj[int(n)-1].openPage()
+
+                welcome_ans = input('What would you like to do:\n')
+
             case other:
                 welcome_ans = input('What would you like to do:\n')
     
+    # goodbye
+    print('\nThank you for using JbScrpr v0.1 and good luck with your applications!\n')
+
 if __name__ == "__main__":
     main()

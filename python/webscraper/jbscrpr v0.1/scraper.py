@@ -38,9 +38,12 @@ class scraper:
         webbrowser.open_new(self.search_path)
 
 
+    def get_path(self):
+        return self.search_path
+    
     # print functions for scraper
     def print_keywords(self):
-        print(f'{self.keywords}\n')
+        print(f'\n{self.keywords}\n')
 
     def print_path(self):
-        print(f'{self.search_path}\n')
+        print(f'\n{self.search_path}\n')
