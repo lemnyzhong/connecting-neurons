@@ -12,7 +12,6 @@ class scraper:
         self.search_path = f'https://www.seek.com.au/{self.keywords}jobs/in-{self.area}'
         self.current_roles = []
         self.employers = []
-
         scraper_obj.append(self)
 
     def scrape(self):
@@ -32,7 +31,6 @@ class scraper:
             print(f'        {self.current_roles[i]} {self.employers[i]}\n')
 
 
-
     # open browser at page
     def openPage(self):
         webbrowser.open_new(self.search_path)
@@ -40,10 +38,13 @@ class scraper:
 
     def get_path(self):
         return self.search_path
-    
+
+
     # print functions for scraper
     def print_keywords(self):
         print(f'\n{self.keywords}\n')
 
+
     def print_path(self):
         print(f'\n{self.search_path}\n')
+
