@@ -10,9 +10,10 @@ class scraper:
         self.keywords = key
         self.area = area
         self.search_path = f'https://www.seek.com.au/{self.keywords}jobs/{self.area}'
-        scraper_obj.append(self)
         self.current_roles = []
         self.employers = []
+
+        scraper_obj.append(self)
 
     def scrape(self):
         rq = requests.get(self.search_path).text
@@ -26,7 +27,7 @@ class scraper:
             self.employers.append(company_span[i].text)
 
     def printAll(self):
-        print(f"\nThese are the current jobs available using keywords: {self.keywords} in area: {self.area}:\n")
+        print(f"\nThese are the current jobs available using keywords: {self.keywords}, in area: {self.area}:\n")
         for i in range(len(self.current_roles)):
             print(f'        {self.current_roles[i]} {self.employers[i]}\n')
 
@@ -39,7 +40,7 @@ class scraper:
 
     # print functions for scraper
     def print_keywords(self):
-        print(self.keywords)
+        print(f'{self.keywords}\n')
 
     def print_path(self):
-        print(self.search_path)
+        print(f'{self.search_path}\n')

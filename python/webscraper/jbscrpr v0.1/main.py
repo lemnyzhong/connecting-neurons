@@ -2,6 +2,7 @@ from scraper import *
 import os
 import time
 
+# designed to waste your time.
 def making_you_wait(waste):
     for i in range(1, waste):
         if i % 2 == 0:
@@ -32,20 +33,20 @@ def main():
 
                 s.printAll()
 
-                welcome_ans = input('\nWhat would you like to do:\n')
+                welcome_ans = input('What would you like to do:\n')
 
             case 'print':
                 for i in scraper_obj:
                     i.printAll()
-                welcome_ans = input('\nWhat would you like to do:\n')
+                welcome_ans = input('What would you like to do:\n')
 
             case 'path':
                 for i in scraper_obj:
                     i.print_path()
-                welcome_ans = input('\nWhat would you like to do:\n')
+                welcome_ans = input('What would you like to do:\n')
             
             case other:
-                welcome_ans = input('\nWhat would you like to do:\n')
+                welcome_ans = input('What would you like to do:\n')
     
 if __name__ == "__main__":
     main()
