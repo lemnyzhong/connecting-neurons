@@ -9,7 +9,7 @@ class scraper:
     def __init__(self, key: str, area: str):
         self.keywords = key
         self.area = area
-        self.search_path = f'https://www.seek.com.au/{self.keywords}jobs/{self.area}'
+        self.search_path = f'https://www.seek.com.au/{self.keywords}jobs/in-{self.area}'
         self.current_roles = []
         self.employers = []
 
