@@ -1,6 +1,4 @@
-import pickle
-
-list_of_foos = []
+from foo_list import *
 
 class Foo:
     def __init__(self, x, y):
@@ -13,40 +11,39 @@ class Foo:
     def printMe(self):
         print(f'{self}')
 
-def create():
-    with open('pickled_ob.pkl', 'wb') as f:
-        pickle.dump(list_of_foos, f)
-
-def read():
-    try:
-        with open('pickled_ob.pkl', 'rb') as f:
-            z = pickle.load(f)
-            for i in z:
-                print(f'{i}\n')
-                i.printX()
-                print()
-    except:
-        print('No files')
-
-def load():
-    with open('pickled_ob.pkl', 'rb') as f:
-        for i in pickle.load(f):
-            list_of_foos.append(i)
-
-# list_of_foos.append(Foo(1000, 1000))
-# create()
-
+ans = input('\nchoose\n')
 load()
-for i in list_of_foos:
-  i.printMe()
+while ans != 'q':
+    match ans:
+        case 'append':
+            x_ans = input('x:\n')
+            y_ans = input('y:\n')
 
-print(list_of_foos[3].x)
-print(list_of_foos[3].y)
-print(list_of_foos[0].x)
-print(list_of_foos[0].y)
+            list_of_foos.append(Foo(x_ans, y_ans))
+            
+            ans = input('\nchoose\n')
+        
+        case 'create':
+            create()
 
+            ans = input('\nchoose\n')
 
-# list_of_foos.append(Foo(88, 88))
-# list_of_foos.append(Foo(-3, -3))
-# create()
+        case 'list':
+            for i in list_of_foos:
+                print(i)
+            
+            ans = input('\nchoose\n')
 
+        case 'clear':
+            clear_all()
+
+            ans = input('\nchoose\n')
+
+        case 'clear saved':
+            clear_all()
+            create()
+
+            ans = input('\nchoose\n')
+            
+        case other:
+            ans = input('\nchoose\n')
