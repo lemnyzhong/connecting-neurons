@@ -1,6 +1,6 @@
 # Hello World, this is the messy inner workings of my mind. 
-
-## And this document tries to help understand the mess.
+## Strap yourself in, this is going to get messy.
+## And this document <u>*tries*</u> to help understand that mess.
 
 This `repo` and the folders contained with in it are a virtual representation of my mind and journey towards becoming a software engineer. For myself, it acts as a reference guide or library to the vast collective information that is fundamental to programming.
 
