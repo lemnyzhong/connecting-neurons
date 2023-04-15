@@ -36,6 +36,7 @@ class scraper:
         webbrowser.open_new(self.search_path)
 
 
+    # returns search path used for url
     def get_path(self):
         return self.search_path
 
@@ -45,6 +46,7 @@ class scraper:
         print(f'\n{self.keywords}\n')
 
 
+    # prints path used for url 
     def print_path(self):
         print(f'\n{self.search_path}\n')
 
