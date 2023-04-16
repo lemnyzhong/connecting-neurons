@@ -28,5 +28,7 @@ Other folders such as:
 
 > `prettyThings` - a folder consisting of mostly web development or visual gui programs.
 
-If you would like to contact me or provide any advice/criticism, please email:
-elsiexie.io@gmail.com
+```
+    If you would like to contact me or provide any advice/feedback, please
+    elsiexie.io@gmail.com
+```
