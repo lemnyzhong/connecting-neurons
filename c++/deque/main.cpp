@@ -21,27 +21,17 @@ int main() {
     // // EXPECT_EQ(deque[0], 23);
     // std::cout << deque[0];
 
-    myDeque<char> deque {'a', 'b', 'c', 'd', 'e'};
+    myDeque<int> deque {};
 
-    deque.pop_front();
-    // EXPECT_EQ(deque.front(), 'b');
-    std::cout << deque.front() << '\n';
+    deque.push_back(1);
 
-    deque.pop_front();
-    // EXPECT_EQ(deque.front(), 'c');
-    std::cout << deque.front() << '\n';
+    deque.push_front(2);
 
-    deque.pop_front();
-    // EXPECT_EQ(deque.front(), 'd');
-    std::cout << deque.front() << '\n';
-
-    deque.pop_front();
-    // EXPECT_EQ(deque.front(), 'e');
-    std::cout << deque.front() << '\n';
+    deque.pop_back();
     
-    deque.pop_front();
-    // EXPECT_TRUE(deque.empty());
-    std::cout << deque.front() << '\n';
-    
+    for(auto i = 0; i < deque.size(); i++) {
+        std::cout << deque[i] << "\n";
+    }
+
     return 0;
 }

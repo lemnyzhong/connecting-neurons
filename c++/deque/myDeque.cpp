@@ -1,9 +1,9 @@
 #include "myDeque.hpp"
-
 #include <vector>
 
 template <typename T>
 myDeque<T>::myDeque() {};
+
 
 template <typename T>
 myDeque<T>::myDeque(int n) {
@@ -15,6 +15,7 @@ myDeque<T>::myDeque(int n) {
         backVector.push_back(0);
     }
 }
+
 
 template <typename T>
 myDeque<T>::myDeque(std::initializer_list<T> vals) {
@@ -29,6 +30,7 @@ myDeque<T>::myDeque(std::initializer_list<T> vals) {
     }
 }
 
+
 template <typename T>
 void myDeque<T>::push_back(T val) {
     if(backVector.size() >= backVector.capacity()) {
@@ -36,6 +38,7 @@ void myDeque<T>::push_back(T val) {
     }
     backVector.push_back(val);
 }
+
 
 template <typename T>
 void myDeque<T>::push_front(T val) {
@@ -45,30 +48,30 @@ void myDeque<T>::push_front(T val) {
     frontVector.push_back(val);
 }
 
+
 template <typename T>
 void myDeque<T>::pop_back() {
-    if(backVector.empty() == false) {
+  if(backVector.empty() == false) {
         backVector.pop_back();
-    }
-    else {
-        if(frontVector.size() == 1) {
-            frontVector.pop_back();
-        }
-        // frontVector.erase(frontVector.begin());
-        else {
-            // rebalance
-            std::size_t midPoint = frontVector.size()/2;
+  }
+  else {
+      if(frontVector.size() == 1) {
+          frontVector.pop_back();
+      }
+      else {
+          std::size_t midPoint = frontVector.size()/2;
 
-            for(auto i = 0; i < int(midPoint); i++) {
-                backVector.push_back(std::move(frontVector[midPoint-i]));
-                //frontVector.erase(frontVector.begin());
-            }
-            frontVector.erase(frontVector.begin(), frontVector.begin()+midPoint);
+          for(auto i = 0; i < int(midPoint); i++) {
+              backVector.push_back(std::move(frontVector[midPoint-i]));
+          }
 
-            backVector.pop_back();
-        }
-    }
+          frontVector.erase(frontVector.begin(), frontVector.begin()+midPoint);
+
+          backVector.pop_back();
+      }
+  }
 }
+
 
 template <typename T>
 void myDeque<T>::pop_front() {
@@ -93,6 +96,7 @@ void myDeque<T>::pop_front() {
     }
 }
 
+
 template <typename T>
 T& myDeque<T>::back() {
     if(backVector.empty() == true) {
@@ -100,6 +104,7 @@ T& myDeque<T>::back() {
     }
     return *(backVector.end()-1);
 }
+
 
 template <typename T>
 const T& myDeque<T>::back() const {
@@ -109,6 +114,7 @@ const T& myDeque<T>::back() const {
     return *(backVector.end()-1);
 }
 
+
 template <typename T>
 T& myDeque<T>::front() {
     if(frontVector.empty() == true) {
@@ -116,6 +122,7 @@ T& myDeque<T>::front() {
     }
     return *(frontVector.end()-1);
 }
+
 
 template <typename T>
 const T& myDeque<T>::front() const {
@@ -125,6 +132,7 @@ const T& myDeque<T>::front() const {
     return *(frontVector.end()-1);
 }
 
+
 template <typename T>
 bool myDeque<T>::empty() const{
     if(frontVector.empty() && backVector.empty()) {
@@ -133,10 +141,12 @@ bool myDeque<T>::empty() const{
     return false;
 }
 
+
 template <typename T>
 int myDeque<T>::size() const{
     return frontVector.size() + backVector.size();
 }
+
 
 template <typename T>
 T& myDeque<T>::operator[](int i) {
@@ -147,6 +157,7 @@ T& myDeque<T>::operator[](int i) {
         return backVector[i-frontVector.size()];
     }
 }
+
 
 template <typename T>
 const T& myDeque<T>::operator[](int i) const {
