@@ -25,13 +25,14 @@ int main() {
 
     deque.push_back(1);
 
-    deque.push_front(2);
-
     deque.pop_back();
-    
+
     for(auto i = 0; i < deque.size(); i++) {
         std::cout << deque[i] << "\n";
     }
 
+
+    std::cout << deque.front();
+    
     return 0;
 }
