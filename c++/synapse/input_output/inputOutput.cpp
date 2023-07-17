@@ -1,20 +1,38 @@
 #include <iostream>
 #include <string>
+#include <limits>
+
+using namespace std;
 
 int main() {
     std::string x;
     int y;
     
-    std::cout << "Hello!\n";
+    cout << "Hello!" << endl;
     
-    std::cin >> x;
-    std::cout << x + "\n";
+    // std::cin >> x;
+    // std::cout << x + "\n";
 
-    std::cin >> y;
-    if(typeid(y) != typeid(std::string)) {
-        std::cout << "That wasn't an int.\n";
+    // if((cin >> y)) {
+    //     cout << y << endl;
+    // }
+    // else {
+    //     cout << "That wasn't an int." << endl;
+    //     cin.clear();
+    //     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    // }
+
+    if(!(cin >> y)) {
+        cout << "That wasn't an int." << endl;
     }
     else {
-        std::cout << y + "\n";
+        cout << y << endl;
     }
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    cin >> x;
+    cout << x;
+
+    return 0;
 }
