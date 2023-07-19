@@ -12,18 +12,22 @@ int main() {
     int choice;
     while(cin >> choice) {
         
+        // enter task
         if(choice == 1) {
             // clearBuffer();
             cout << "Please enter a task" << endl;
         }
+        // edit task
         else if(choice == 2) {
             // clearBuffer();
             cout << "Which task would you like to edit?" << endl;
         }
+        // view task
         else if(choice == 3) {
             // clearBuffer();
             cout << "Here are your current tasks." << endl;
         }
+        // exit
         else if(choice == 4) {
             cout << "Goodbye." << endl;
             break;
