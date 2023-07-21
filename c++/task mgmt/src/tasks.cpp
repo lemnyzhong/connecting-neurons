@@ -33,6 +33,11 @@ void addTask(float& d, string& t, bool& p) {
     // adjust and assign user data for editing
 // }
 
+void deleteTask(int i) {
+    allTasks.erase(allTasks.begin()+i);
+    cout << "Task deleted!" << endl;
+}
+
 void printAllTasks() {
     for(int i = 0; i < allTasks.size(); i++) {
         cout << allTasks[i].date << endl;

@@ -36,8 +36,20 @@ int main() {
         }
         // edit task
         else if(choice == 2) {
-            // clearBuffer();
-            cout << "Which task would you like to edit?" << endl;
+            int selection;
+            string choice;
+
+            clearBuffer();
+
+            cout << "Which task would you like to edit/delete?" << endl;
+            cin >> selection;
+
+            cout << "Would you like to edit or delete?" << endl;
+            cin >> choice;
+            
+            if(choice == "delete") {
+                deleteTask(selection);
+            }
         }
         // view task
         else if(choice == 3) {
