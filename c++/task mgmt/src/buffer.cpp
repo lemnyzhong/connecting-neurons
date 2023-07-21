@@ -4,8 +4,12 @@
 using namespace std;
 
 /*
+allows for mistypes of int selection 
+    e.g user input: 2e
+    this function allows the user to still have the 2nd selection
+    without including the addition char, to avoid any errors
 used to clear input buffer and ignore any char
-used in conjunction with int user inputs
+used in conjunction with *INT* user inputs
 */
 void clearBuffer() {
     cin.clear();

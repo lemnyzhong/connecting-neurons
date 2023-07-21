@@ -1,5 +1,6 @@
 #include <iostream>
 #include "buffer.cpp"
+#include "tasks.cpp"
 
 using namespace std;
 
@@ -14,8 +15,24 @@ int main() {
         
         // enter task
         if(choice == 1) {
-            // clearBuffer();
-            cout << "Please enter a task" << endl;
+            float currDate;
+            string currTask;
+            bool currPrio;
+
+            clearBuffer();
+            
+            cout << "Please enter the date: ";
+            cin >> currDate;
+            
+            clearBuffer();
+            
+            cout << "Please enter the task: " << endl;
+            getline(cin >> ws, currTask);
+
+            cout << "Top priority? [true/false]: ";
+            cin >> currPrio;
+            
+            addTask(currDate, currTask, currPrio);
         }
         // edit task
         else if(choice == 2) {
@@ -25,7 +42,8 @@ int main() {
         // view task
         else if(choice == 3) {
             // clearBuffer();
-            cout << "Here are your current tasks." << endl;
+            //cout << "Here are your current tasks." << endl;
+            printAllTasks();
         }
         // exit
         else if(choice == 4) {
