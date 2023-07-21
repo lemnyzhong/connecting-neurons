@@ -17,11 +17,21 @@ vector<tasks> allTasks;
     // so all tasks are recorded and in perpetuity
 // }
 
+// void saveTasks() {
+    // store vector allTasks in external file for
+    // retrieval and data perpetuity
+// }
+
 void addTask(float& d, string& t, bool& p) {
     tasks newTask = {d, t, p};
     allTasks.push_back(newTask);
     cout << "Task saved!" << endl;
 }
+
+// void editTask() {
+    // find task to edit
+    // adjust and assign user data for editing
+// }
 
 void printAllTasks() {
     for(int i = 0; i < allTasks.size(); i++) {
