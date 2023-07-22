@@ -5,12 +5,19 @@
 using namespace std;
 
 struct tasks {
+    // string id;
     float date;
     string task;
     bool priority;
 };
 
 vector<tasks> allTasks;
+
+// void setID() {
+    // get size of allTasks
+    // concat. "e" + size 
+    // store in tasks id type
+//}
 
 // void loadTasks() {
     // need function to load in from external file
