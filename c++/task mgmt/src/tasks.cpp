@@ -35,10 +35,12 @@ void addTask(float& d, string& t, bool& p) {
     cout << "Task saved!" << endl;
 }
 
-// void editTask() {
-    // find task to edit
-    // adjust and assign user data for editing
-// }
+// find task to edit
+// adjust and assign user data for editing
+void editTask(int sel, string t, bool p) {
+    allTasks[sel].task = t;
+    allTasks[sel].priority = p;
+}
 
 void deleteTask(int i) {
     allTasks.erase(allTasks.begin()+i);

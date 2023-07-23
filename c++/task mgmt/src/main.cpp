@@ -50,6 +50,20 @@ int main() {
             if(choice == "delete") {
                 deleteTask(selection);
             }
+            else {
+                string t;
+                bool p;
+                
+                clearBuffer();
+                
+                cout << "Please enter the new task:" << endl;
+                getline(cin >> ws, t);
+
+                cout << "What priority would you like to change to [0/1]: ";
+                cin >> p;
+
+                editTask(selection, t, p);
+            }
         }
         // view task
         else if(choice == 3) {
