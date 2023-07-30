@@ -5,19 +5,13 @@
 using namespace std;
 
 struct tasks {
-    // string id;
+    string id;
     float date;
     string task;
     bool priority;
 };
 
 vector<tasks> allTasks;
-
-// void setID() {
-    // get size of allTasks
-    // concat. "e" + size 
-    // store in tasks id type
-//}
 
 // void loadTasks() {
     // need function to load in from external file
@@ -29,26 +23,53 @@ vector<tasks> allTasks;
     // retrieval and data perpetuity
 // }
 
+string createID() {
+    // get size of allTasks
+    // concat. "e" + size 
+    // store in tasks id type
+    return "e" + to_string(allTasks.size() + 1);
+}
+
 void addTask(float& d, string& t, bool& p) {
-    tasks newTask = {d, t, p};
+    string id = createID();
+    tasks newTask = {id, d, t, p};
     allTasks.push_back(newTask);
     cout << "Task saved!" << endl;
 }
 
-// find task to edit
-// adjust and assign user data for editing
-void editTask(int sel, string t, bool p) {
-    allTasks[sel].task = t;
-    allTasks[sel].priority = p;
+void editTask(int sel, string newTask, bool newPrio) {
+    // find task to edit
+    // adjust and assign user data for editing
+    
+    allTasks[sel].task = newTask;
+    allTasks[sel].priority = newPrio;
 }
 
-void deleteTask(int i) {
-    allTasks.erase(allTasks.begin()+i);
+void deleteTask(int taskNumber) {
+    // ** IMPORTANT **
+    // SEG FAULT when trying to delete non existing
+    // potential fix:
+    // checks whether taskNumber exists in allTasks
+    // if not break edit with message
+
+    allTasks.erase(allTasks.begin() + taskNumber);
     cout << "Task deleted!" << endl;
 }
 
 void printAllTasks() {
-    for(int i = 0; i < allTasks.size(); i++) {
+    if(allTasks.size() == 0) {
+            cout << endl;
+
+            cout << "There are no tasks!" << endl;
+            
+            cout << endl;
+    }
+    else {
+        for(int i = 0; i < allTasks.size(); i++) {
+
+        cout << endl;
+        
+        cout << allTasks[i].id << endl;
         cout << allTasks[i].date << endl;
         cout << allTasks[i].task << endl;
 
@@ -57,6 +78,9 @@ void printAllTasks() {
         }
         else {
             cout << "unimportant!" << endl;
+        }
+
+        cout << endl;
         }
     }
 }

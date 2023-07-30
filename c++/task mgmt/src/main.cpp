@@ -34,6 +34,7 @@ int main() {
             
             addTask(currDate, currTask, currPrio);
         }
+
         // edit task
         else if(choice == 2) {
             int selection;
@@ -65,17 +66,21 @@ int main() {
                 editTask(selection, t, p);
             }
         }
+
         // view task
         else if(choice == 3) {
             // clearBuffer();
             //cout << "Here are your current tasks." << endl;
             printAllTasks();
         }
+
         // exit
         else if(choice == 4) {
             cout << "Goodbye." << endl;
             break;
         }
+
+        // invalid selection
         else {
             cout << "You didn't enter a proper selection. Try again." << endl;
         }
