@@ -17,8 +17,7 @@ body main h1 {
   width: 100%;
   margin: 11em auto;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-animation: fadeIn 8s ease-in forwards;
-          animation: fadeIn 8s ease-in forwards;
+  animation: fadeIn 8s ease-in forwards;
 }
 body main h1 a {
   color: black;
@@ -29,8 +28,7 @@ body main h1 a {
 body main h1 a span {
   font-weight: bold;
   font-size: 50px;
-  -webkit-animation: fadeIn 12s forwards;
-          animation: fadeIn 12s forwards;
+  animation: fadeIn 12s forwards;
 }
 body main h1 a:hover {
   visibility: hidden;
@@ -53,8 +51,7 @@ footer {
   background-color: rgb(255, 255, 255);
   height: 12vh;
   width: 100vw;
-  -webkit-animation: fadeIn 5s forwards;
-          animation: fadeIn 5s forwards;
+  animation: fadeIn 5s forwards;
 }
 footer ul {
   list-style: none;
@@ -94,20 +91,10 @@ footer object {
   width: 40vw;
 }
 footer object:hover {
-  -webkit-animation: grow 3s forwards;
-          animation: grow 3s forwards;
+  animation: grow 3s forwards;
 }
 footer .hide-all {
   visibility: hidden;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fadeIn {
@@ -116,14 +103,6 @@ footer .hide-all {
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes grow {
-  from {
-    transform: scale(100%);
-  }
-  to {
-    transform: scale(150%);
   }
 }
 @keyframes grow {
